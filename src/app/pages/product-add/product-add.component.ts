@@ -17,10 +17,11 @@ export class ProductAddComponent {
   products: Product[] = [];
 
   addForm: FormGroup = new FormGroup({
-    title: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    title: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    image: new FormControl('', []),
     price: new FormControl('', [Validators.required, Validators.min(0)]),
     description: new FormControl('', [Validators.required]),
-    image: new FormControl('', [Validators.required]),
+    category: new FormControl('', [Validators.required]),
   });
 
 
