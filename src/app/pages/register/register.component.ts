@@ -32,14 +32,20 @@ export class RegisterComponent {
 
   constructor(private router: Router) {}
   handleSubmit() {
-    console.log(this.registerForm.value);
+    // console.log(this.registerForm.value);
+
     this.authService.register(this.registerForm.value).subscribe({
       next: () => {
-        alert("Ok ")
+        alert("Dang Ky Thanh cong ")
         this.router.navigate(['/login']);
       },
       error: (error) => {
-        // show error
+        if (error.status === 409) { // assuming 409 Conflict status for existing user
+          alert("This email is already registered. Please use a different email.");
+        } else {
+          alert("An error occurred during registration. Please try again.");
+        }
+        console.error(error.message);
         console.error(error.message);
       },
     });
