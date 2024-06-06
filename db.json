@@ -85,5 +85,12 @@
       "id": "o6BEoe1"
     }
   ],
-  "users": []
+  "users": [
+   
+    {
+      "email": "admin1111@gmail.com",
+      "password": "$2a$10$iWzmodYwvcLWVqtEvhkyOO5LzWjyDOx7dj5SH5NSni6eLGyDC8qWi",
+      "id": 2
+    }
+  ]
 }
