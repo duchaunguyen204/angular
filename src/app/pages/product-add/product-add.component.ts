@@ -28,13 +28,20 @@ export class ProductAddComponent {
   constructor(private router: Router) {}
 
   handleSubmit() {
+    
+    if (this.addForm.invalid) {
+      this.addForm.markAllAsTouched(); // to show validation errors
+      return;
+    }
+    
     this.productsService.Add(this.addForm.value).subscribe({
       next: () => {
         this.router.navigate(['/']);
-        alert('Add Complete');
+        alert('Product added successfully');
       },
       error: (e) => {
         console.log(e);
+        alert('Failed to add product. Please try again.');
       },
     });
   }

@@ -7,11 +7,12 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,NgIf],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
@@ -32,7 +33,7 @@ export class LoginComponent {
         // assuming the token is in response.token
         localStorage.setItem('authToken', response.token);
       alert("Dang nhap thanh cong")
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
       },
       error: (error) => {
         // show error

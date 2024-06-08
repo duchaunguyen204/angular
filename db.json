@@ -82,16 +82,8 @@
       "email": "admin1111@gmail.com",
       "password": "$2a$10$iWzmodYwvcLWVqtEvhkyOO5LzWjyDOx7dj5SH5NSni6eLGyDC8qWi",
       "id": 2
-    },
-    {
-      "email": "admin1@gmail.com",
-      "password": "$2a$10$h4VXPfRNMmYV1xlWxQ/5c.4mtbQ82Rl.pn8bVdM7mB0mcLHC3.iM.",
-      "id": 3
-    },
-    {
-      "email": "admin12@gmail.com",
-      "password": "$2a$10$/fRQZkR2mQT8O2ZDz1TMUO0JLvgJC20X/JFav6.72pOKllRNX18sS",
-      "id": 4
     }
+    
+    
   ]
 }

@@ -9,12 +9,13 @@ import {
 
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,NgIf],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
@@ -22,6 +23,7 @@ export class RegisterComponent {
   authService = inject(AuthService);
 
   registerForm: FormGroup = new FormGroup({
+    username: new FormControl('',[]) ,
     email: new FormControl('', [Validators.email, Validators.required]),
     password: new FormControl('', [
       Validators.minLength(6),
