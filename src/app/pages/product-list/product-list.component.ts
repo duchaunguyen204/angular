@@ -28,13 +28,12 @@ export class ProductListComponent {
   constructor(private router: Router) {}
 
   handleDelete(id: string) {
-    const confirm = window.confirm('Are you sure');
-    if (confirm) {
+    if (window.confirm('Are you sure')) {
       this.productsService.Delete(id).subscribe({
         next: () => {
           this.products = this.products.filter((product) => product.id !== id);
           alert('Delete Complete');
-          this.router.navigate(['/']);
+          this.router.navigate(['/admin/products/list']);
         },
       });
     } else {

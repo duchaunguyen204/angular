@@ -2,10 +2,10 @@
   "products": [
     {
       "title": "Mens Casual Slim Fit",
-      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-      "category": "Clother Man",
       "price": 15.99,
+      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
       "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Clother Man",
       "id": "4"
     },
     {
@@ -79,11 +79,28 @@
   ],
   "users": [
     {
-      "email": "admin1111@gmail.com",
-      "password": "$2a$10$iWzmodYwvcLWVqtEvhkyOO5LzWjyDOx7dj5SH5NSni6eLGyDC8qWi",
-      "id": 2
+      "email": "daddy123@gmail.com",
+      "password": "$2a$10$gqAZv0DP8Tu.ruHIp83g1.Geg2xz7kLTbc7HwalUYhknPy2pyZjM.",
+      "username": "freefire",
+      "id": 3
+    },
+    {
+      "email": "dd@gmail.com",
+      "password": "$2a$10$DkcO5IVkSHLz67.FxxU5ouO6Th7pRnCOwjHi5x3oXB9SPlHGznHzO",
+      "username": "ddqddddfdcf",
+      "id": 4
+    },
+    {
+      "email": "g123@gmail.com",
+      "password": "$2a$10$Lx3jnp1lbbib2SiMfnmuBuXdjaFA1aEFWcCs63Cy61l1.e6Cmt6Wm",
+      "username": "",
+      "id": 5
+    },
+    {
+      "email": "gn3698862@gmail.com",
+      "password": "$2a$10$NH6oSfe3vGW/OcnM.t5EO.DaBs7wGezT1e8azv2VL.w3MWZ65srom",
+      "username": "",
+      "id": 6
     }
-    
-    
   ]
 }

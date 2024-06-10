@@ -20,19 +20,10 @@ Add(data : any) {
   return this.http.post(this.apiUrl , data)
 }
 Edit(id: string , data: any) {
-  return this.http.get(`${this.apiUrl}/${id}`, data)
+  return this.http.put(`${this.apiUrl}/${id}`, data)
 }
 Delete(id : string) {
   return this.http.delete(`${this.apiUrl}/${id}`)
 }
-Register() {
-  return this.http.get(this.apiUrl)
-}
-Login() {
-  return this.http.get(this.apiUrl)
-}
-
-  constructor() { }
-
 
 }

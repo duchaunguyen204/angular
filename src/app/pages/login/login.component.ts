@@ -12,7 +12,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,NgIf],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
@@ -29,11 +29,14 @@ export class LoginComponent {
   handleSubmit() {
     console.log(this.loginForm.value);
     this.authService.login(this.loginForm.value).subscribe({
-      next: (response: any) => {
-        // assuming the token is in response.token
-        localStorage.setItem('authToken', response.token);
-      alert("Dang nhap thanh cong")
-        this.router.navigate(['/']);
+      next: (data) => {
+        console.log(data);
+        localStorage.setItem(
+          'token',
+          (data as { accessToken: string }).accessToken
+        );
+        alert('Dang nhap thanh cong');
+        this.router.navigate(['/admin/products/list']);
       },
       error: (error) => {
         // show error

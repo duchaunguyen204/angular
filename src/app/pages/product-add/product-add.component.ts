@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../types/Products';
 import { NgIf } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product-add',
@@ -28,20 +29,17 @@ export class ProductAddComponent {
   constructor(private router: Router) {}
 
   handleSubmit() {
-    
-    if (this.addForm.invalid) {
-      this.addForm.markAllAsTouched(); // to show validation errors
-      return;
-    }
-    
+ 
+    console.log(this.addForm);
     this.productsService.Add(this.addForm.value).subscribe({
       next: () => {
-        this.router.navigate(['/']);
-        alert('Product added successfully');
+      
+        Swal.fire(`Thêm sản phẩm thành công!`, `Trở về trang chủ nào !!`, 'success');
+        this.router.navigate(['/admin/products/list']);
       },
-      error: (e) => {
-        console.log(e);
-        alert('Failed to add product. Please try again.');
+      error: (error) => {
+        // show error
+        console.error(error.message);
       },
     });
   }
